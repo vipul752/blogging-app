@@ -8,9 +8,9 @@ const userSchema = new mongoose.Schema({
     email:String,
     age:Number,
     name:String,
-    post :[{
+    posts :[{
         type:mongoose.Schema.Types.ObjectId,
-        ref:"Post"
+        ref:"post"
     }]
 })
 

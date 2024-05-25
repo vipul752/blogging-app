@@ -1,19 +1,80 @@
+<!-- login.ejs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 8px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    <div class="w-full-h min-h-screen bg-zinc-900 text-white">
-        <h3 class="text-3xl mb-5">Login Your Account</h3>
-        <form action="/login" method="post">
-            <input class="px-3 py-2 rounded-md outline-none bg-transparent border-2 border-zinc-800"type="email" placeholder="email" name="email">
-            <input class="px-3 py-2 rounded-md outline-none bg-transparent border-2 border-zinc-800"type="password" placeholder="password" name="password">
-   
-            <input class="px-5 py-2 bg-blue-500 rounded-md "type="submit" value="Login Your Account">
+    <div class="login-container">
+        <h1>Login</h1>
+        <form action="/login" method="POST">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            <button type="submit">Login</button>
         </form>
     </div>
 </body>
