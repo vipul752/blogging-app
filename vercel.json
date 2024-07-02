@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "project-backend",
+  "name": "mini-project",
   "builds": [{ "src": "index.js", "use": "@vercel/node" }],
   "routes": [{ "src": "/(.*)", "dest": "/server.js" }]
 }
